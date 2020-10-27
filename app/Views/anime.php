@@ -18,7 +18,7 @@
                 <div class="swiper-slide">Slide 7</div>
                 <div class="swiper-slide">Slide 8</div>
                 <div class="swiper-slide">Slide 9</div>
-                <div class="swiper-slide">Slide 10</div>
+                <div class="swiper-slide">Slide 10</div> 
               </div>
               <!-- Add Pagination -->
               <div class="swiper-pagination"></div>

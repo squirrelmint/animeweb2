@@ -1,0 +1,17 @@
+CRITICAL - 2020-10-27 00:53:25 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\animeweb2\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\animeweb2\system\Model.php(1648): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\animeweb2\app\Models\Video_Model.php(96): CodeIgniter\Model->__get('an_slide')
+#3 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(33): App\Models\Video_Model->get_slide(1)
+#4 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-27 00:57:37 --> Undefined property: App\Controllers\Home::$path_thumbnail
+#0 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 54, Array)
+#1 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

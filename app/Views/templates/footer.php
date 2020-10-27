@@ -1,31 +1,51 @@
   <!-- menu mobile -->
+  div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <?php
+              foreach ($list_category as $val) {
+                if ( !empty($cate_id) && $cate_id == $val['category_id']) {
+                  $active = 'active';
+                }else{
+                  $active = '';
+
+                }
+
+              ?>
+
+
+                <a class="dropdown-item <?= $active ?>" onclick="goCate('<?= ($val['category_id']) ?>','<?= $val['category_name'] ?>')"><?= $val['category_name'] ?></a>
+
+              <?php
+              } ?>
+  </div>
+
   <div class="menu-mobile">
     <ul>
-        <li>
-          <a href="">
-            <i class="fas fa-home"></i>HOME
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fas fa-language"></i>SUB-THAI
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fab fa-teamspeak"></i>SOUND-THAI
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fas fa-film"></i>MOVIE
-          </a>
-        </li>
-        <li>
-          <a href="https://lin.ee/cQkxJQK">
-            <i class="fas fa-comments"></i>CONTRACT
-          </a>
-        </li>
+      <li>
+        <a href=" <?php echo base_url() ?> ">
+          <i class="fas fa-home"></i>HOME
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="fas fa-language"></i>SUB-THAI
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="fab fa-teamspeak"></i>SOUND-THAI
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="openNav()">
+          <i class="fas fa-film"></i>CATEGORY
+        </a>
+      </li>
+      <li>
+        <a href="#" data-toggle="modal" data-target="#anime-contract">
+          <i class="fas fa-comments"></i>CONTRACT
+        </a>
+      </li>
     </ul>
   </div>
 
@@ -60,7 +80,7 @@
   </footer>
 
   <script>
-    $(document).ready(function(){
+    $(document).ready(function() {
 
       var mySwiper = new Swiper('#HomeSlide', {
         loop: true,
@@ -81,7 +101,29 @@
       })
 
     });
+
+    function goView(id, name , ep) {
+    
+      window.location.href = "/anime/" + id + '/' + name + '/' + ep;
+    }
+
+    
+
+    function goCate(id, name) {
+
+      window.location.href = "/category/" + id + '/' + name ;
+    }
+    /* Set the width of the side navigation to 0 */
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    
   </script>
+
 
 </body>
 
