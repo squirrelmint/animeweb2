@@ -1,31 +1,30 @@
   <!-- menu mobile -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a class="dropdown-item active" onclick="">Action</a>
+    <a class="dropdown-item active" onclick="">Action</a>
+    <a class="dropdown-item active" onclick="">Action</a>
+    <a class="dropdown-item active" onclick="">Action</a>
+    <a class="dropdown-item active" onclick="">Action</a>
+  </div>
+
   <div class="menu-mobile">
     <ul>
-        <li>
-          <a href="">
-            <i class="fas fa-home"></i>HOME
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fas fa-language"></i>SUB-THAI
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fab fa-teamspeak"></i>SOUND-THAI
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <i class="fas fa-film"></i>MOVIE
-          </a>
-        </li>
-        <li>
-          <a href="https://lin.ee/cQkxJQK">
-            <i class="fas fa-comments"></i>CONTRACT
-          </a>
-        </li>
+      <li>
+        <a href=" <?php echo base_url() ?> ">
+          <i class="fas fa-home"></i>HOME
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="openNav()">
+          <i class="fas fa-film"></i>CATEGORY
+        </a>
+      </li>
+      <li>
+        <a href="#" data-toggle="modal" data-target="#anime-contract">
+          <i class="fas fa-comments"></i>CONTRACT
+        </a>
+      </li>
     </ul>
   </div>
 
@@ -60,27 +59,14 @@
   </footer>
 
   <script>
-    $(document).ready(function(){
-
-      var mySwiper = new Swiper('#HomeSlide', {
-        loop: true,
-        speed: 800,
-        spaceBetween: 100,
-        effect: 'fade',
-
-        // Slide auto play
-        autoplay: {
-          delay: 5000,
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      })
-
-    });
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
   </script>
 
 </body>

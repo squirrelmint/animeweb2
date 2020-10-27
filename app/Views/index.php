@@ -12,73 +12,75 @@
   <section id="anime-popular" class="text-center">
     <div class="container">
       <div class="row flex-col">
-        <div class="anime-bg-title "><h2 class="anime-title">Popular <span>Anime</span></h2></div>
-        <ul class="list-anime">
-        <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+        <div class="col-md-12">
+          <div class="anime-bg-title "><h2 class="anime-title">Popular <span>Anime</span></h2></div>
+          <ul class="list-anime">
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
+              </div>
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
+              </div>
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -87,202 +89,204 @@
   <section id="anime-update" class="text-center">
     <div class="container">
       <div class="row flex-col">
-        <div class="anime-bg-title "><h2 class="anime-title">Anime <span>Update</span></h2></div>
-        <ul id="list-anime" class="list-anime">
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+        <div class="col-md-12">
+          <div class="anime-bg-title "><h2 class="anime-title">Anime <span>Update</span></h2></div>
+          <ul id="list-anime" class="list-anime">
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="anime-box">
-              <a href="">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                <div class="anime-play"><i class="fas fa-play-circle"></i></div>
-              </a>
-            </div>
-            <div class="title-in">
-              <h2>
-                <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-              </h2>
-              <div class="anime-score">
-                <i class="fas fa-star"></i> 8.6
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
-        <button id="anime-loadmore">Load more ...</button>
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
+              </div>
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
+              </div>
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNarutoNarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
+              </div>
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
+              </div>
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
+              </div>
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="anime-box">
+                <a href="">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+                  <div class="anime-play"><i class="fas fa-play-circle"></i></div>
+                </a>
+              </div>
+              <div class="title-in">
+                <h2>
+                  <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
+                </h2>
+                <div class="anime-score">
+                  <i class="fas fa-star"></i> 8.6
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button id="anime-loadmore">Load more ...</button>
+        </div>
       </div>
     </div>
   </section>
@@ -300,8 +304,10 @@
   <section id="anime-footer" class="bg-light text-center">
     <div class="container">
       <div class="row">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <p><strong>ดูอนิเมะฟรี</strong> โหลดไวแบบไม่มีสะดุดภาพคมชัดระดับ HD FullHD 4k ครบทุกเรื่องทุกรสดูได้ทุกที่ทุกเวลาทั้งบนมือถือ แท็บเล็ต เครื่องคอมพิวเตอร์ ระบบปฏิบัติการ Android และ IOS ดูอนิเมะใหม่ให้รับชมอีกมากมาย สามารถรับชมฟรีได้ทุกที่ทุกเวลาตลอด 24 ชั่วโมง</p>
+        <div class="col-md-12">
+          <a class="navbar-brand" href="#">Start Bootstrap</a>
+          <p><strong>ดูอนิเมะฟรี</strong> โหลดไวแบบไม่มีสะดุดภาพคมชัดระดับ HD FullHD 4k ครบทุกเรื่องทุกรสดูได้ทุกที่ทุกเวลาทั้งบนมือถือ แท็บเล็ต เครื่องคอมพิวเตอร์ ระบบปฏิบัติการ Android และ IOS ดูอนิเมะใหม่ให้รับชมอีกมากมาย สามารถรับชมฟรีได้ทุกที่ทุกเวลาตลอด 24 ชั่วโมง</p>
+        </div>
       </div>
     </div>
   </section>

@@ -12,10 +12,10 @@ use CodeIgniter\Model;
 class Video_Model extends Model
 {
 
-    protected $table_movie = 'mo_movie';
-    protected $table_category = 'mo_category';
-    protected $mo_moviecate = 'mo_moviecate';
-    protected $table_vdoads = 'mo_adsvideo';
+    protected $table_movie = 'an_movie';
+    protected $table_category = 'an_category';
+    protected $mo_moviecate = 'an_moviecate';
+    protected $table_vdoads = 'an_adsvideo';
     protected $pathAdsVideo = 'movie/adsvdo';
     protected $ads = 'ads';
     protected $report_movie = 'movie_report';
