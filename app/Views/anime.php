@@ -1,30 +1,43 @@
-  
   <!-- Icons Grid -->
   <section id="anime-detail-video" class="bg-anime text-center">
     <div class="container">
       <div class="row">
         <div id="anime-detail">
           <div class="anime-poster">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
+            <?php if (substr($data_anime['movie_picture'], 0, 4) == 'http') {
+              $movie_picture = $data_anime['movie_picture'];
+            } else {
+              $movie_picture = $path_thumbnail . $data_anime['movie_picture'];
+            }
+            $url_name = urlencode(str_replace(' ', '-', $data_anime['movie_thname']))
+            ?>
+            <img src="<?= $movie_picture ?>">
           </div>
           <div class="anime-card-detail">
-            <h1 class="anime-video-title">KIMETSU NO YAIBA</h1>
+            <h1 class="anime-video-title"><?= $data_anime['movie_thname'] ?> </h1>
             <div class="anime-score">
               <span class="anime-text-red">คะแนน :</span>
-              <i class="fas fa-star"></i> 8.6
+              <i class="fas fa-star"></i> <?= $data_anime['movie_ratescore'] ?>
             </div>
             <div class="anime-date">
-              <span class="anime-text-red">เข้าฉาย :</span>
-              August, 20 2020
+              <span class="anime-text-red"><span> <?= $DateEng['m'] . ' ' . $DateEng['d'] . ', ' . $DateEng['Y'] ?></span></span>
+
             </div>
             <div class="anime-category">
               <span class="anime-text-red">แนวของเรื่อง :</span>
-              Action / Adventure / Super Power
+              <?php foreach ($data_anime['cate_data'] as  $val) { ?>
+                <a href="<?php echo base_url() . '/category/' . $val['category_id'] . '/' . $val['category_name'] ?>" target="_blank">
+                  <span class="cate-name"><?= $val['category_name'] ?></span>
+                  
+                </a>
+
+              <?php } ?>
+
             </div>
             <div class="anime-description">
               <span class="anime-text-red">เรื่องย่อ :</span>
               <p>
-                เรื่องราวเกิดขึ้นในประเทศญี่ปุ่นยุคไทโช คามาโดะ ทันจิโร่ เป็นเด็กหนุ่มผู้มีจิตใจอ่อนโยนและเฉลียวฉลาด ในฐานะลูกชายคนโตของครอบครัวคนเผาถ่าน เขาจึงเป็นหัวเรี่ยวหัวแรงในการหารายได้เลี้ยงดูครอบครัวจากการเผาถ่านไปขายหลังจากพ่อของเขาเสียชีวิต ทุกสิ่งทุกอย่างได้เปลี่ยนแปลงไปเมื่อมีอสูรบุกเข้ามาสังหารคนในครอบครัวของทันจิโร่ เหลือแต่เพียงเขาและน้องสาวที่ชื่อเนะซึโกะเท่านั้น เนะซึโกะที่รอดตายมาได้กลับกลายเป็นอสูรไป ทว่าก็น่าประหลาดใจที่เธอยังคงมีความคิดและการแสดงอารมณ์อย่างมนุษย์หลงเหลืออยู่ หลังจากที่ทันจิโร่ได้ต่อสู้กับโทมิโอะกะ กิยู นักล่าอสูรที่เดินทางผ่านมาและต้องการจะฆ่าเนะซึโกะที่กลายเป็นอสูรไปแล้ว เขาจึงตัดสินใจที่จะเป็นนักล่าอสูรตามคำชักชวนของกิยู เพื่อหาทางทำให้น้องสาวกลับมาเป็นมนุษย์ และชำระแค้นจากอสูรที่ฆ่าคนในครอบครัวของเขาให้จงได้
+                <?= $data_anime['movie_des'] ?>
               </p>
             </div>
           </div>
@@ -38,40 +51,25 @@
       <div class="row">
 
         <div id="anime-player">
-          <iframe id="player" class="player" src="<?= base_url('player/1/0') ?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
+          <iframe id="player" class="player" src="<?= base_url('player/' . $data_anime['movie_id'] . '/' . $ep_index) ?>" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe>
           <div class="anime-episode">
             <div id="NextEP" class="swiper-container">
               <div class="swiper-wrapper">
+           
+              <?php foreach ($data_anime['ep_data'] as $key => $val) { 
+                $url_nameep = urlencode(str_replace(' ', '-', $val['NameEp']))
+                 ?>
+
+
                 <div class="swiper-slide">
-                  <a onclick="" tabindex="-1" alt="" title="">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                    <span class="active">EP 1</span>
+               
+                  <a onclick="goView('<?= ($data_anime['movie_id']) ?>','<?= urldecode($url_name) ?>','<?= $key ?>','<?= $url_nameep ?>')" tabindex="-1">
+                    <img src="<?= $movie_picture ?>"><br>
+                    <?= $val['NameEp'] ?>
                   </a>
                 </div>
-                <div class="swiper-slide">
-                  <a onclick="" tabindex="-1" alt="" title="">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                    <span class="active">EP 1</span>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a onclick="" tabindex="-1" alt="" title="">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                    <span class="active">EP 1</span>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a onclick="" tabindex="-1" alt="" title="">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                    <span class="active">EP 1</span>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a onclick="" tabindex="-1" alt="" title="">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-                    <span class="active">EP 1</span>
-                  </a>
-                </div>
+              <?php } ?>
+
               </div>
 
               <!-- If we need navigation buttons -->
@@ -80,7 +78,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
   </section>
@@ -102,13 +100,13 @@
         slidesPerView: 4,
         spaceBetween: 30,
         centeredSlides: true,
-        
+        initialSlide: '<?=$ep_index?>',
         // Navigation arrows
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        
+
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -116,7 +114,4 @@
       });
 
     };
-
   </script>
-
-

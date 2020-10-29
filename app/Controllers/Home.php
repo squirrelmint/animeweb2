@@ -1,4 +1,7 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
+
 use App\Models\Video_Model;
 
 class Home extends BaseController
@@ -25,14 +28,17 @@ class Home extends BaseController
 		helper(['url', 'pagination', 'dateformat']);
 	}
 
-		public function index()
+	public function index()
 	{
 		$slide_anime = $this->VideoModel->get_slide($this->branch);
-		$list_anime = $this->VideoModel->get_list_video($this->branch);
+		$pagination = $this->VideoModel->get_list_video($this->branch);
+		foreach ($pagination['list'] as $val) {
+			$list_anime[] = $this->VideoModel->get_anime_data($val['movie_id']);
+		}
 		$ads = $this->VideoModel->get_path_imgads($this->branch);
 		$list_category = $this->VideoModel->get_category($this->branch);
 		$date = get_date($slide_anime[0]['movie_create']);
-		
+
 		$chk_act = [
 			'home' => 'active',
 			'subthai' => '',
@@ -44,19 +50,18 @@ class Home extends BaseController
 			'document_root' => $this->document_root,
 			'list_category' => $list_category,
 			'chk_act' => $chk_act,
+			'ads' => $ads,
+			'path_ads' => $this->path_ads,
+
 
 		];
 		$body_data = [
 			'url_loadmore' => base_url() . '/animedata',
 			'path_thumbnail' => $this->path_thumbnail,
-			'list_anime' => $list_anime['list'],
-			'pagination' => $list_anime,
-			'ads' => $ads,
-			'path_ads' => $this->path_ads,
+			'list_anime' => $list_anime,
+			'pagination' => $pagination,
 			'slide_anime' => $slide_anime,
 			'DateEng' => $date['DateEng'],
-
-
 		];
 
 
@@ -65,44 +70,182 @@ class Home extends BaseController
 		echo view('templates/footer.php');
 	}
 
-	public function anime()
+	public function anime($id, $Name, $ep_index = 0, $Nameep )
 	{
-		$header_data = [
-			'document_root' => $this->document_root
+		$data_anime = $this->VideoModel->get_anime_data($id);
+		$ads = $this->VideoModel->get_path_imgads($this->branch);
+
+		$list_category = $this->VideoModel->get_category($this->branch);
+		$date = get_date($data_anime['movie_create']);
+
+
+		// echo '<pre>' . print_r($data_anime, true) . '</pre>';
+		// die;
+		$chk_act = [
+			'home' => 'active',
+			'subthai' => '',
+			'soundthai' => '',
+			'category' => '',
 		];
 
-		echo view('templates/header.php',$header_data);
-		echo view('anime.php');
+		$header_data = [
+			'document_root' => $this->document_root,
+			'list_category' => $list_category,
+			'chk_act' => $chk_act,
+			'ads' => $ads,
+			'path_ads' => $this->path_ads,
+			'Nameep' => $Nameep,
+		];
+		$body_data = [
+			'url_loadmore' => base_url() . '/animedata',
+			'path_thumbnail' => $this->path_thumbnail,
+			'data_anime' => $data_anime,
+			'ep_index' => $ep_index,
+			'DateEng' => $date['DateEng'],
+
+		];
+		echo view('templates/header.php', $header_data);
+		echo view('anime.php', $body_data);
 		echo view('templates/footer.php');
 	}
 
 	public function animedata()
 	{
+		$list_anime = $this->VideoModel->get_list_video($this->branch, '', '', $_GET['page']);
 		$header_data = [
-			'document_root' => $this->document_root
-		];
+			'document_root' => $this->document_root,
+			'path_thumbnail' => $this->path_thumbnail,
+			'list_anime' => $list_anime['list'],
 
-		echo view('animedata.php');
+
+		];
+		echo view('animedata.php', $header_data);
 	}
-
-	public function list()
+	public function animedata_search()
 	{
+		$list_anime = $this->VideoModel->get_list_video($this->branch, $_GET['keyword'], '', $_GET['page']);
 		$header_data = [
-			'document_root' => $this->document_root
+			'document_root' => $this->document_root,
+			'path_thumbnail' => $this->path_thumbnail,
+			'list_anime' => $list_anime['list'],
+
+		];
+		echo view('animedata.php', $header_data);
+	}
+	public function animedata_category()
+	{
+
+		$list_anime = $this->VideoModel->get_list_video($this->branch, '', $_GET['keyword'],  $_GET['page']);
+		$header_data = [
+			'document_root' => $this->document_root,
+			'path_thumbnail' => $this->path_thumbnail,
+			'list_anime' => $list_anime['list'],
+
+		];
+		echo view('animedata.php', $header_data);
+	}
+	public function list() //ต้นแบบ หน้า cate / search
+	{
+		$list_category = $this->VideoModel->get_category($this->branch);
+		// echo '<pre>' . print_r($list_category, true) . '</pre>';
+		// die;
+		$header_data = [
+			'document_root' => $this->document_root,
+			'list_category' => $list_category,
+
 		];
 
-		echo view('templates/header.php',$header_data);
+		echo view('templates/header.php', $header_data);
 		echo view('list.php');
 		echo view('templates/footer.php');
 	}
 
-	public function player($id,$index)
+	public function search($keyword)
 	{
-		$anime = $this->VideoModel->get_anime($id);
-		$adsvideo = $this->VideoModel->get_adsvideolist($this->backURL);
+		$keyword = urldecode($keyword);
+		$pagination = $this->VideoModel->get_list_video($this->branch,  $keyword, '', $page = 1);
 
+
+		foreach ($pagination['list'] as $val) {
+			$list_anime[] = $this->VideoModel->get_anime_data($val['movie_id']);
+		}
+		$ads = $this->VideoModel->get_path_imgads($this->branch);
+		$list_category = $this->VideoModel->get_category($this->branch);
+		$chk_act = [
+			'home' => 'active',
+			'subthai' => '',
+			'soundthai' => '',
+			'category' => '',
+		];
+
+		$header_data = [
+			'document_root' => $this->document_root,
+			'list_category' => $list_category,
+	
+			'keyword' => $keyword,
+			'chk_act' => $chk_act,
+			'ads' => $ads,
+			'path_ads' => $this->path_ads,
+		];
+		$body_data = [
+			'url_loadmore' => base_url() . '/animedata_search',
+			'path_thumbnail' => $this->path_thumbnail,
+			'list_anime' => $list_anime,
+			'pagination' => $pagination,
+		];
+		echo view('templates/header.php', $header_data);
+		echo view('list.php', $body_data);
+		echo view('templates/footer.php');
+	}
+
+	public function category($cate_id, $cate_name)
+	{
+
+		$pagination = $this->VideoModel->get_list_video($this->branch, "", $cate_id, $page = 1);
+
+
+		foreach ($pagination['list'] as $val) {
+			$list_anime[] = $this->VideoModel->get_anime_data($val['movie_id']);
+		}
+		$ads = $this->VideoModel->get_path_imgads($this->branch);
+		$list_category = $this->VideoModel->get_category($this->branch);
+		$chk_act = [
+			'home' => '',
+			'subthai' => '',
+			'soundthai' => '',
+			'category' => 'active',
+		];
+
+
+		$header_data = [
+			'document_root' => $this->document_root,
+			'list_category' => $list_category,
+			
+			'cate_id' => $cate_id,
+			'ads' => $ads,
+			'chk_act' => $chk_act,
+			'path_ads' => $this->path_ads,
+		];
+		$body_data = [
+			'cate_name' => urldecode($cate_name),
+			'keyword' => $cate_id,
+			'url_loadmore' => base_url() . '/animedata_category',
+			'path_thumbnail' => $this->path_thumbnail,
+			'list_anime' => $list_anime,
+			'pagination' => $pagination,
+		];
+		echo view('templates/header.php', $header_data);
+		echo view('list.php', $body_data);
+		echo view('templates/footer.php');
+	}
+	public function player($id, $index)
+	{
+		$anime = $this->VideoModel->get_anime_data($id);
+		$adsvideo = $this->VideoModel->get_adsvideolist($this->backURL);
+		// echo '<pre>' . print_r($anime, true) . '</pre>';
+		// 		die;
 		if ($index != "") {
-			$playerUrl = $anime['data'][$index]['EpData'];
+			$playerUrl = $anime['ep_data'][$index]['EpData'];
 		}
 
 		$data = [
@@ -113,6 +256,6 @@ class Home extends BaseController
 			'playerUrl' 	=> $playerUrl
 		];
 
-		echo view('player.php',$data);
+		echo view('player.php', $data);
 	}
 }

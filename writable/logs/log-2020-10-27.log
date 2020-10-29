@@ -95,3 +95,22 @@ CRITICAL - 2020-10-27 00:57:37 --> Undefined property: App\Controllers\Home::$pa
 #4 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
 >>>>>>> dee5ebfe14085f6b3a547eaf4e24b5edb8198d7d
+CRITICAL - 2020-10-27 23:55:55 --> Undefined variable: chk_act
+#0 C:\xampp\htdocs\animeweb2\app\Views\templates\header.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 50, Array)
+#1 C:\xampp\htdocs\animeweb2\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\animeweb2\system\Common.php(1071): CodeIgniter\View\View->render('templates/heade...', Array, true)
+#3 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(77): view('templates/heade...', Array)
+#4 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->anime('261', 'Kakushigoto-%E0...', '0')
+#5 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-27 23:56:40 --> You must set the database table to be used with your query.
+#0 C:\xampp\htdocs\animeweb2\system\Model.php(1190): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 C:\xampp\htdocs\animeweb2\system\Model.php(1700): CodeIgniter\Model->builder()
+#2 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(234): CodeIgniter\Model->__call('get_anime', Array)
+#3 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->player('1', '0')
+#4 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

@@ -44,7 +44,7 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item <?= $chk_act['home'] ?>">
             <a class="nav-link" href="<?php echo base_url() ?>">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown <?= $chk_act['category'] ?>">
@@ -87,9 +87,9 @@
 
             <input id="anime-search" class="anime-search" placeholder="Search..." value="<?php echo $value ?>">
             <div class="input-group-btn">
-                <div class="btn-group" role="group">
-                  <button type="submit" class="anime-search-button"><i class="fas fa-search"></i></button>
-                </div>
+              <div class="btn-group" role="group">
+                <button type="submit" class="anime-search-button"><i class="fas fa-search"></i></button>
+              </div>
             </div>
           </div>
         </form>
@@ -130,19 +130,19 @@
                   กรุณากรอกชื่อ นามสกุล
                 </div>
                 <label> Email :</label>
-                <input id="ads_con_email" type="text" class="form-control"  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" required autocomplete="off">
+                <input id="ads_con_email" type="text" class="form-control" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" required autocomplete="off">
                 <div class="invalid-feedback">
                   กรุณากรอก Email เช่น " xxx@xxx.com "
                 </div>
-                <label> Line ID :</label> 
+                <label> Line ID :</label>
                 <input id="ads_con_line" type="text" class="form-control" required autocomplete="off">
                 <div class="invalid-feedback">
                   กรุณากรอก Line ID
                 </div>
                 <label> เบอร์โทรศัพท์ :</label>
                 <input id="ads_con_tel" type="text" class="form-control" required autocomplete="off" pattern="^0([8|9|6])([0-9]{8}$)">
-                <div class="invalid-feedback" >
-                  กรุณากรอก เบอร์โทรศัพท์ 10หลัก  เช่น " 0600000000 "
+                <div class="invalid-feedback">
+                  กรุณากรอก เบอร์โทรศัพท์ 10หลัก เช่น " 0600000000 "
                 </div>
 
                 <label id="ads_con_all_alt">**กรุณากรอกข้อมูลให้ครบทุกช่อง</label>
@@ -156,85 +156,40 @@
     </div>
   </div>
 
-  <section id="anime-banners" class="text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-lg-12 ">
-          <img class="banners" src="https://gurubac.com//images/banner.jpg?692d2df5f9f9837e6112a0e772232da7">
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="modal fade" id="anime-contract" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="pill" href="#request">ขอหนัง</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="pill" href="#contract">ติดต่อลงโฆษณา</a>
-            </li>
-          </ul>
-          <div class="tab-content" id="formrequest">
-            <div id="request" class="tab-pane container active">
-              <form method="POST" action="">
-                <textarea rows="4" id="request_text" class="form-control"></textarea>
-                <center><button type="submit" class="anime-btnrequest">ส่งข้อความ</button></center>
-              </form>
-            </div>
-            <div id="contract" class="tab-pane container fade">
-              <form id="anime-formcontract" novalidate>
-                <label for="ads_con_name"> ชื่อ สกุล :</label>
-                <input id="ads_con_name" name="ads_con_name" type="text" class="form-control" required autocomplete="off">
-                <div class="invalid-feedback">
-                  กรุณากรอกชื่อ นามสกุล
-                </div>
-                <label for="ads_con_email"> Email :</label>
-                <input id="ads_con_email" type="text" class="form-control"  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" required autocomplete="off">
-                <div class="invalid-feedback">
-                  กรุณากรอก Email เช่น " xxx@xxx.com "
-                </div>
-                <label for="ads_con_line"> Line ID :</label> 
-                <input id="ads_con_line" type="text" class="form-control" required autocomplete="off">
-                <div class="invalid-feedback">
-                  กรุณากรอก Line ID
-                </div>
-                <label for="ads_con_tel"> เบอร์โทรศัพท์ :</label>
-                <input id="ads_con_tel" type="text" class="form-control" required autocomplete="off" pattern="^0([8|9|6])([0-9]{8}$)">
-                <div class="invalid-feedback" >
-                  กรุณากรอก เบอร์โทรศัพท์ 10หลัก  เช่น " 0600000000 "
-                </div>
+  <?php foreach ($ads as $value) {
+    if ($value['ads_position'] == "1") {
+  ?>
 
-                <label id="ads_con_all_alt">**กรุณากรอกข้อมูลให้ครบทุกช่อง</label>
-
-                <center><button type="submit" class="anime-btnrequest">ส่งข้อความ</button></center>
-              </form>
+      <section id="anime-banners" class="bg-light text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-12 ">
+              <img class="banners" src='<?php echo  $path_ads . $value['ads_picture']; ?>'>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
+
+  <?php } else {
+    }
+  }
+  ?>
+
+  
 
   <script type="text/javascript">
-$(function(){
-     $("#anime-formcontract").on("submit",function(){
-         var form = $(this)[0];
+    $(function() {
+      $("#anime-formcontract").on("submit", function() {
+        var form = $(this)[0];
         if (form.checkValidity() === false) {
           event.preventDefault();
           event.stopPropagation();
-        }3
-        form.classList.add('was-validated');         
-     });     
-});
-</script>
+        }
+        3
+        form.classList.add('was-validated');
+      });
+    });
+  </script>
   <script>
     $(document).ready(function() {
       $("#ads_con_email_alt").hide();
@@ -254,7 +209,5 @@ $(function(){
         }
 
       }
-      
-
-      
+    });
   </script>

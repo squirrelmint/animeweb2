@@ -71,8 +71,9 @@
 
   <script>
 
-    function goView(id, name , ep) {
-      window.location.href = "/anime/" + id + '/' + name + '/' + ep;
+    function goView(id, name , ep, nameep) {
+      window.location.href = "/anime/" + id + '/' + name + '/' + ep + '/' + nameep ;
+
     }
   
     function goCate(id, name) {
