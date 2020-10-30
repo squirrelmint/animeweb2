@@ -11,7 +11,7 @@ class Home extends BaseController
 	public $path_ads = "";
 	public $branch = 1;
 	public $backURL = "https://backend.gumovie1.com/public/";
-	public $document_root = 'http://localhost:83/public/';
+	public $document_root = 'http://localhost:84/public/';
 	public $path_thumbnail = "https://anime.vip-streaming.com/";
 
 	public function __construct()

@@ -6,6 +6,10 @@
 
 body {
   font-family: 'Ubuntu', 'Kanit', Helvetica, Arial, sans-serif;
+  background-color: #feffc2;
+  background-image: url(/public/assets/img/blurred.jpg);
+  background-size: cover;
+  background-position: left;
 }
 
 h1,
@@ -558,6 +562,8 @@ section {
 
   h2.anime-title {
     font-size: 27px!important;
+    margin-left: -4rem;
+    padding-left: 4rem;
   }
 }
 
@@ -569,6 +575,7 @@ ul.list-anime {
   flex-wrap: wrap;
   margin: auto;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   padding-left: 0px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -656,7 +663,7 @@ ul.list-anime > li div.title-in h2 {
   margin: 0 auto;
   font-style: italic;
   font-size: 22px;
-  word-break: break-all;
+  word-break: break-word;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -684,6 +691,12 @@ ul.list-anime > li div.title-in .anime-score {
   margin: 0 auto;
   font-style: italic;
   color: #00d2b5;
+}
+
+ul.list-anime > li div.title-in .anime-score span.line-small {
+  font-style: normal;
+  padding: 0 5px;
+  color: #cacaca;
 }
 
 #anime-popular ul.list-anime > li div.title-in .anime-score {
@@ -745,6 +758,10 @@ ul.list-anime > li div.title-in .anime-score {
 
   ul.list-anime > li div.title-in h2 {
     font-size: 16px;
+  }
+
+  ul.list-anime > li div.title-in .anime-score {
+    font-size: 12px;
   }
   
 }
@@ -985,6 +1002,10 @@ ul.list-anime > li div.title-in .anime-score {
   color: #00d2b5;
 }
 
+img.logo {
+  height: 80px;
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
 
   #anime-detail-video #anime-detail .anime-card-detail .anime-title {
@@ -1152,13 +1173,13 @@ ul.list-anime > li div.title-in .anime-score {
 }
 
 .menu-mobile li.active a {
-  color: #00aabc;
+  color: #00d2b5;
 }
 
 .menu-mobile li a i {
   display: block;
   font-size: 20px;
-  background: #00aabc;
+  background: #00d2b5;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1e767',endColorstr='#feb645',GradientType=0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1195,7 +1216,7 @@ ul.list-anime > li div.title-in .anime-score {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 18px;
-  color: #00aabc;
+  color: #00d2b5;
   display: block;
   transition: 0.3s;
 }
@@ -1204,6 +1225,13 @@ ul.list-anime > li div.title-in .anime-score {
 .sidenav a:hover {
   color: #818181;
 }
+
+.sidenav a:active,
+.sidenav a.active {
+  color: #fff;
+  background-color: #00d2b5;
+}
+
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
@@ -1257,9 +1285,9 @@ ul.list-anime > li div.title-in .anime-score {
 
 #anime-contract .nav-pills .nav-link.active, 
 #anime-contract .nav-pills .show>.nav-link {
-  color: #00aabc;
+  color: #00d2b5;
   background: transparent;
-  border-bottom: 3px solid #00aabc;
+  border-bottom: 3px solid #00d2b5;
   border-radius: 0;
 }
 
@@ -1274,7 +1302,7 @@ ul.list-anime > li div.title-in .anime-score {
 }
 
 #anime-contract .anime-btnrequest {
-  background: #2ef5ff;
+  background: #00d2b5;
   border-radius: 50px;
   border: 3px solid #3ee6df;
   padding: 5px 20px;

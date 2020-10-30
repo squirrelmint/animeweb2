@@ -40,3 +40,14 @@ Stack trace:
   thrown
 #0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
 #1 {main}
+CRITICAL - 2020-10-30 01:32:44 --> Class Home does not exist
+#0 C:\xampp\htdocs\anime\web2\system\Debug\Toolbar\Collectors\Routes.php(107): ReflectionMethod->__construct('Home', '_remap')
+#1 C:\xampp\htdocs\anime\web2\system\Debug\Toolbar\Collectors\BaseCollector.php(318): CodeIgniter\Debug\Toolbar\Collectors\Routes->display()
+#2 C:\xampp\htdocs\anime\web2\system\Debug\Toolbar.php(128): CodeIgniter\Debug\Toolbar\Collectors\BaseCollector->getAsArray()
+#3 C:\xampp\htdocs\anime\web2\system\Debug\Toolbar.php(356): CodeIgniter\Debug\Toolbar->run(1604039564.0638, 0.2095, Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#4 C:\xampp\htdocs\anime\web2\system\Filters\DebugToolbar.php(75): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#5 C:\xampp\htdocs\anime\web2\system\Filters\Filters.php(188): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+#6 C:\xampp\htdocs\anime\web2\system\CodeIgniter.php(416): CodeIgniter\Filters\Filters->run('', 'after')
+#7 C:\xampp\htdocs\anime\web2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\anime\web2\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}

@@ -6,10 +6,10 @@
          <?php
           if (!empty($cate_name)) {
 
-            $title = '<h2 class="anime-title"> <span> ' . $cate_name . '</span></h2>';
+            $title = '<h2 class="anime-title">' . $cate_name . '</h2>';
           } else if (!empty($keyword)) {
 
-            $title = '<h2 class="anime-title">คุณกำลังค้นหา : <span> ' . $keyword . '</span></h2>';
+            $title = '<h2 class="anime-title">คุณกำลังค้นหา : ' . $keyword . '</h2>';
           }
           ?>
          <div class="anime-bg-title "> <?= $title ?></div>
@@ -43,8 +43,9 @@
                      <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ','-' ,$val['ep_data'][0]['NameEp']) ?>')" tabindex="-1"><?= $val['movie_thname'] ?></a>
                    </h2>
                    <div class="anime-score">
-                     <span>score</span>
-                     <span class="score"><?= $val['movie_ratescore'] ?></span>
+                    <i class="fas fa-star"></i> <?= $val['movie_ratescore'] ?>
+                    <span class="line-small">|</span>
+                    <i class="fas fa-eye"></i> 100
                    </div>
                  </div>
                </li>
@@ -63,6 +64,16 @@
      </div>
    </div>
  </section>
+
+ <section id="anime-banners" class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 ">
+          <img class="banners" src="https://gurubac.com//images/banner.jpg?692d2df5f9f9837e6112a0e772232da7">
+        </div>
+      </div>
+    </div>
+  </section>
 
  <script>
   $(document).ready(function() {

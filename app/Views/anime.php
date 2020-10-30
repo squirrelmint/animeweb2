@@ -28,9 +28,7 @@
               <?php foreach ($data_anime['cate_data'] as  $val) { ?>
                 <a href="<?php echo base_url() . '/category/' . $val['category_id'] . '/' . $val['category_name'] ?>" target="_blank">
                   <span class="cate-name"><?= $val['category_name'] ?></span>
-                  
                 </a>
-
               <?php } ?>
 
             </div>

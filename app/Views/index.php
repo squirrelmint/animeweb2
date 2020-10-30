@@ -42,6 +42,8 @@
                   </h2>
                   <div class="anime-score">
                     <i class="fas fa-star"></i> <?= $val['movie_ratescore'] ?>
+                    <span class="line-small">|</span>
+                    <i class="fas fa-eye"></i> 100
                   </div>
                 </div>
               </li>
@@ -87,6 +89,8 @@
                   </h2>
                   <div class="anime-score">
                     <i class="fas fa-star"></i> <?= $val['movie_ratescore'] ?>
+                    <span class="line-small">|</span>
+                    <i class="fas fa-eye"></i> 100
                   </div>
                 </div>
               </li>
@@ -112,7 +116,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <a class="navbar-brand" href="#">Start Bootstrap</a>
+          <a class="navbar-brand" href="#"><img class="logo" src="http://localhost:83/public/logo/Logo-Anime-8k-1.png"></a>
           <p><strong>ดูอนิเมะฟรี</strong> โหลดไวแบบไม่มีสะดุดภาพคมชัดระดับ HD FullHD 4k ครบทุกเรื่องทุกรสดูได้ทุกที่ทุกเวลาทั้งบนมือถือ แท็บเล็ต เครื่องคอมพิวเตอร์ ระบบปฏิบัติการ Android และ IOS ดูอนิเมะใหม่ให้รับชมอีกมากมาย สามารถรับชมฟรีได้ทุกที่ทุกเวลาตลอด 24 ชั่วโมง</p>
         </div>
       </div>

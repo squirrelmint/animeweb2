@@ -41,7 +41,9 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light anime-navbar static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="<?php echo str_replace('/public','',base_url()) ?>">
+        <img class="logo" src="http://localhost:83/public/logo/Logo-Anime-8k-1.png">
+      </a>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
@@ -49,30 +51,22 @@
             <a class="nav-link" href="<?php echo base_url() ?>">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown <?= $chk_act['category'] ?>">
-            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATEGORY</a>
+            <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <?php
-              foreach ($list_category as $val) {
-                if (!empty($cate_id) && $cate_id == $val['category_id']) {
-                  $active = 'active';
-                } else {
-                  $active = '';
-                }
-
+                foreach ($list_category as $val) {
+                  if (!empty($cate_id) && $cate_id == $val['category_id']) {
+                    $active = 'active';
+                  } else {
+                    $active = '';
+                  }
               ?>
-
-
                 <a class="dropdown-item <?= $active ?>" onclick="goCate('<?= ($val['category_id']) ?>','<?= $val['category_name'] ?>')"><?= $val['category_name'] ?></a>
-
-              <?php
-              } ?>
-
-
+              <?php } ?>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#anime-contract">CONTRACT</a>
-
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#anime-contract">Contract</a>
           </li>
         </ul>
         <form id="anime-formsearch">
