@@ -259,4 +259,8 @@ class Home extends BaseController
 
 		echo view('player.php', $data);
 	}
+	public function countView($id)
+	{
+		$this->VideoModel->countView($id);
+	}
 }

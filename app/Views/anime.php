@@ -19,7 +19,7 @@
               <span class="anime-text-red">คะแนน :</span>
               <i class="fas fa-star"></i> <?= $data_anime['movie_ratescore'] ?>
             </div>
-            <div class="anime-date">
+            <div class="anime-date"><span class="anime-text-red">อัพเดท :</span>
               <span class="anime-text-red"><span> <?= $DateEng['m'] . ' ' . $DateEng['d'] . ', ' . $DateEng['Y'] ?></span></span>
 
             </div>
@@ -27,7 +27,14 @@
               <span class="anime-text-red">แนวของเรื่อง :</span>
               <?php foreach ($data_anime['cate_data'] as  $val) { ?>
                 <a href="<?php echo base_url() . '/category/' . $val['category_id'] . '/' . $val['category_name'] ?>" target="_blank">
-                  <span class="cate-name"><?= $val['category_name'] ?></span>
+                  <span class="cate-name">
+
+                  
+                    <?= $val['category_name'] ?>
+                    <?php if (end($data_anime['cate_data']) != $val) {
+                      echo ' /   ';
+                    } ?>
+                  </span>
                 </a>
               <?php } ?>
 
@@ -53,20 +60,20 @@
           <div class="anime-episode">
             <div id="NextEP" class="swiper-container">
               <div class="swiper-wrapper">
-           
-              <?php foreach ($data_anime['ep_data'] as $key => $val) { 
-                $url_nameep = urlencode(str_replace(' ', '-', $val['NameEp']))
-                 ?>
+
+                <?php foreach ($data_anime['ep_data'] as $key => $val) {
+                  $url_nameep = urlencode(str_replace(' ', '-', $val['NameEp']))
+                ?>
 
 
-                <div class="swiper-slide">
-               
-                  <a onclick="goView('<?= ($data_anime['movie_id']) ?>','<?= urldecode($url_name) ?>','<?= $key ?>','<?= $url_nameep ?>')" tabindex="-1">
-                    <img src="<?= $movie_picture ?>"><br>
-                    <?= $val['NameEp'] ?>
-                  </a>
-                </div>
-              <?php } ?>
+                  <div class="swiper-slide">
+
+                    <a onclick="goView('<?= ($data_anime['movie_id']) ?>','<?= urldecode($url_name) ?>','<?= $key ?>','<?= $url_nameep ?>')" tabindex="-1">
+                      <img src="<?= $movie_picture ?>"><br>
+                      <?= $val['NameEp'] ?>
+                    </a>
+                  </div>
+                <?php } ?>
 
               </div>
 
@@ -98,7 +105,7 @@
         slidesPerView: 4,
         spaceBetween: 30,
         centeredSlides: false,
-        initialSlide: '<?=$ep_index?>',
+        initialSlide: '<?= $ep_index ?>',
         // Navigation arrows
         navigation: {
           nextEl: '.swiper-button-next',
