@@ -44,7 +44,7 @@
     </div>
   </section>
 
-  <section id="anime-video" class="bg-light text-center">
+  <section id="anime-video" class="text-center">
     <div class="container">
       <div class="row">
 
@@ -97,7 +97,7 @@
       var swiper = new Swiper('#NextEP', {
         slidesPerView: 4,
         spaceBetween: 30,
-        centeredSlides: true,
+        centeredSlides: false,
         initialSlide: '<?=$ep_index?>',
         // Navigation arrows
         navigation: {
