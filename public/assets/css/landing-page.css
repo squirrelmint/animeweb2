@@ -127,9 +127,37 @@ footer.footer {
 
 /* Custom */
 
+a {
+  color: #00d4ea;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #9e9e9e;
+  text-decoration: none;
+}
+
+button:focus,
+a:focus {
+  outline: none;
+}
+
+section {
+  padding-top: 20px;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: #000000c7;
 }
 
 .anime-navbar {
@@ -1153,7 +1181,7 @@ ul.list-anime > li div.title-in .anime-score {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 999; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   background-color: #ececec; /* Black*/
