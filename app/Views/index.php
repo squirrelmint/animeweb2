@@ -13,11 +13,13 @@
     <div class="container">
       <div class="row flex-col">
         <div class="col-md-12">
-          <div class="anime-bg-title"><h2 class="anime-title">Popular <span>Anime</span></h2></div>
+          <div class="anime-bg-title">
+            <h2 class="anime-title">Popular <span>Anime</span></h2>
+          </div>
           <ul class="list-anime">
 
             <?PHP
-              foreach ($slide_anime as $val) {
+            foreach ($slide_anime as $val) {
               $url_name = urlencode(str_replace(' ', '-', $val['movie_thname']));
             ?>
               <li>
@@ -32,7 +34,7 @@
                   $url_name = urlencode(str_replace(' ', '-', $val['movie_thname']));
                   ?>
 
-                  <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ','-' ,$val['ep_data'][0]['NameEp']) ?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
+                  <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ', '-', $val['ep_data'][0]['NameEp']) ?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
                     <img src="<?= $movie_picture ?>" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
                   </a>
                 </div>
@@ -43,18 +45,25 @@
                   <div class="anime-score">
                     <i class="fas fa-star"></i> <?= $val['movie_ratescore'] ?>
                     <span class="line-small">|</span>
-                    <i class="fas fa-eye"></i> 100
+                    <?php if (!($val['movie_view'])) {
+                      $view = 0;
+                    } else if (strlen($val['movie_view']) >= 5) {
+                      $view =  substr($val['movie_view'], 0, -3) . 'k';
+                    } else {
+                      $view = $val['movie_view'];
+                    } ?>
+                    <i class="fas fa-eye"></i> <?= $view ?>
                   </div>
                 </div>
               </li>
             <?php  } ?>
-            
+
           </ul>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- Icons Grid -->
   <section id="anime-update" class="text-center">
     <div class="container">
@@ -65,7 +74,7 @@
           </div>
           <ul id="list-anime" class="list-anime">
             <?PHP
-              foreach ($list_anime as $val) {
+            foreach ($list_anime as $val) {
             ?>
               <li>
                 <div class="anime-box">
@@ -79,23 +88,30 @@
                   $url_name = urlencode(str_replace(' ', '-', $val['movie_thname']));
                   ?>
 
-                  <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ','-' ,$val['ep_data'][0]['NameEp']) ?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
+                  <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ', '-', $val['ep_data'][0]['NameEp']) ?>')" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
                     <img src="<?= $movie_picture ?>" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>">
                   </a>
                 </div>
                 <div class="title-in">
                   <h2>
-                    <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ','-' ,$val['ep_data'][0]['NameEp']) ?>')" tabindex="-1" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
+                    <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0','<?= str_replace(' ', '-', $val['ep_data'][0]['NameEp']) ?>')" tabindex="-1" alt="<?= $val['movie_thname'] ?>" title="<?= $val['movie_thname'] ?>"><?= $val['movie_thname'] ?></a>
                   </h2>
                   <div class="anime-score">
                     <i class="fas fa-star"></i> <?= $val['movie_ratescore'] ?>
                     <span class="line-small">|</span>
-                    <i class="fas fa-eye"></i> 100
+                    <?php if (!($val['movie_view'])) {
+                      $view = 0;
+                    } else if (strlen($val['movie_view']) >= 5) {
+                      $view =  substr($val['movie_view'], 0, -3) . 'k';
+                    } else {
+                      $view = $val['movie_view'];
+                    } ?>
+                    <i class="fas fa-eye"></i> <?= $view ?>
                   </div>
                 </div>
               </li>
             <?php  } ?>
-            </ul>
+          </ul>
           <button id="anime-loadmore">Load more ...</button>
         </div>
       </div>
@@ -124,13 +140,12 @@
   </section>
 
   <script>
-
     $(document).ready(function() {
 
       var track_click = 2; //track user click on "load more" button, righ now it is 0 click
       var total_pages = '<?= $pagination['total_page'] ?>';
 
-      if( track_click == total_pages ){
+      if (track_click >= total_pages) {
         $("#anime-loadmore").hide(0);
       }
 
@@ -154,7 +169,7 @@
 
         }
 
-        if(track_click >= total_pages){
+        if (track_click >= total_pages) {
 
           $("#anime-loadmore").hide(0);
 
@@ -164,5 +179,3 @@
 
     });
   </script>
-
-

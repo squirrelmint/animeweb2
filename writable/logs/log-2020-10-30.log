@@ -51,3 +51,64 @@ CRITICAL - 2020-10-30 01:32:44 --> Class Home does not exist
 #7 C:\xampp\htdocs\anime\web2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\xampp\htdocs\anime\web2\index.php(45): CodeIgniter\CodeIgniter->run()
 #9 {main}
+CRITICAL - 2020-10-30 03:01:19 --> Table 'anime8k.an_slide' doesn't exist
+#0 C:\xampp\htdocs\animeweb2\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\animeweb2\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\animeweb2\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\animeweb2\app\Models\Video_Model.php(117): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...', Array)
+#4 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(33): App\Models\Video_Model->get_slide(1)
+#5 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-10-30 03:01:19 --> Table 'anime8k.an_slide' doesn't exist
+#0 C:\xampp\htdocs\animeweb2\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\animeweb2\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\r\n       ...')
+#2 C:\xampp\htdocs\animeweb2\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\r\n       ...')
+#3 C:\xampp\htdocs\animeweb2\app\Models\Video_Model.php(117): CodeIgniter\Database\BaseConnection->query('SELECT\r\n       ...', Array)
+#4 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(33): App\Models\Video_Model->get_slide(1)
+#5 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-10-30 03:02:11 --> Undefined variable: list_anime
+#0 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(193): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 193, Array)
+#1 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->search('tesst')
+#2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-30 03:02:20 --> Undefined variable: list_anime
+#0 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(193): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 193, Array)
+#1 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->search('tesdt')
+#2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-30 04:51:08 --> Undefined variable: list_anime
+#0 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(193): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 193, Array)
+#1 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->search('\xE0\xB8\x81\xE0\xB8\x9F\xE0\xB8\xAB\xE0\xB8\x81')
+#2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-30 04:55:13 --> [] operator not supported for strings
+#0 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->search('test')
+#1 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-30 04:56:06 --> [] operator not supported for strings
+#0 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->search('test')
+#1 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-30 04:57:23 --> [] operator not supported for strings
+#0 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->search('test')
+#1 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

@@ -45,7 +45,14 @@
                    <div class="anime-score">
                     <i class="fas fa-star"></i> <?= $val['movie_ratescore'] ?>
                     <span class="line-small">|</span>
-                    <i class="fas fa-eye"></i> 100
+                    <?php if (!($val['movie_view'])) {
+                      $view = 0;
+                    } else if (strlen($val['movie_view']) >= 5) {
+                      $view =  substr($val['movie_view'], 0, -3) . 'k';
+                    } else {
+                      $view = $val['movie_view'];
+                    } ?>
+                    <i class="fas fa-eye"></i> <?= $view ?>
                    </div>
                  </div>
                </li>
@@ -59,7 +66,13 @@
             } ?>
 
          </ul>
+      <?php
+         if ($list_anime) {
+      ?>
          <button id="anime-loadmore">Load more ...</button>
+         <?php
+      }
+      ?>
        </div>
      </div>
    </div>
@@ -81,7 +94,7 @@
     var total_pages = '<?= $pagination['total_page'] ?>';
     var keyword = '<?= $keyword ?>';
 
-    if( track_click == total_pages ){
+    if( track_click >= total_pages ){
       $("#anime-loadmore").hide(0);
     }
 
