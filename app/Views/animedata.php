@@ -1,183 +1,35 @@
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/51wIwhIO6JL._AC_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/61ikGLXtYcL._AC_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/71jloykHu5L._AC_SY741_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/51wIwhIO6JL._AC_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/61ikGLXtYcL._AC_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">NarutoNarutoNarutoNarutoNarutoNarutoNaruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/71jloykHu5L._AC_SY741_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/71nQwqxnYZL._AC_SY741_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/51wIwhIO6JL._AC_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/61ikGLXtYcL._AC_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
-<li>
-  <div class="anime-box">
-    <a href="">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/71jloykHu5L._AC_SY741_.jpg">
-    </a>
-  </div>
-  <div class="title-in">
-    <h2>
-      <a href="" tabindex="-1">Naruto Naruto NarutoNarutoNaruto</a>
-    </h2>
-    <div class="anime-score">
-      <i class="fas fa-star"></i> 8.6
-    </div>
-  </div>
-</li>
 
 
-           
+<?PHP
+foreach ($list_anime as $val) {
+  // echo '<pre>' . print_r($val, true) . '</pre>';
+  // die;
+?>
+  <li>
+    <div class="anime-box">
+
+      <?php if (substr($val['movie_picture'], 0, 4) == 'http') {
+        $movie_picture = $val['movie_picture'];
+      } else {
+        $movie_picture = $path_thumbnail . $val['movie_picture'];
+      }
+      $url_name = urlencode(str_replace(' ', '-', $val['movie_thname']));
+      ?>
+
+      <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0')">
+
+        <img src="<?= $movie_picture ?>">
+      </a>
+    </div>
+    <div class="title-in">
+      <h2>
+        <a onclick="goView('<?= ($val['movie_id']) ?>','<?= $url_name ?>','0')" tabindex="-1"><?= $val['movie_thname'] ?></a>
+      </h2>
+      <div class="anime-score">
+        <span>score</span>
+        <span class="score"><?= $val['movie_ratescore'] ?></span>
+      </div>
+
+    </div>
+  </li>
+<?php  } ?>
