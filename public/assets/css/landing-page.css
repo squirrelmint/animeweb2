@@ -256,7 +256,7 @@ section {
     pointer-events: none;
     padding: 2px 8px;
     right: 4px;
-    background-color: transparent;
+    background-color: #fff;
   }
 
   .anime-search:focus:-moz-placeholder  {
@@ -268,7 +268,7 @@ section {
   }
 
   #anime-formsearch .anime-search-button i {
-    color: #00aabc;
+    color: #282d2e;
   }
 
   .anime-search:focus {
@@ -310,7 +310,7 @@ section {
     pointer-events: none;
     padding: 2px 8px;
     right: 4px;
-    background-color: transparent;
+    background-color: #fff;
   }
 
   .anime-search:focus:-moz-placeholder  {
@@ -322,7 +322,7 @@ section {
   }
 
   #anime-formsearch .anime-search-button i {
-    color: #00aabc;
+    color: #282d2e;
   }
 
   .anime-search:focus {
