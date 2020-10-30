@@ -36,6 +36,7 @@
 </head>
 
 <body>
+  <div id="overlay"></div>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light anime-navbar static-top">
