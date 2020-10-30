@@ -28,7 +28,14 @@ foreach ($list_anime as $val) {
       <div class="anime-score">
         <i class="fas fa-star"></i> <?= $val['movie_ratescore'] ?>
         <span class="line-small">|</span>
-        <i class="fas fa-eye"></i> 100
+        <?php if (!($val['movie_view'])) {
+                      $view = 0;
+                    } else if (strlen($val['movie_view']) >= 5) {
+                      $view =  substr($val['movie_view'], 0, -3) . 'k';
+                    } else {
+                      $view = $val['movie_view'];
+                    } ?>
+                    <i class="fas fa-eye"></i> <?= $view ?>
       </div>
 
     </div>

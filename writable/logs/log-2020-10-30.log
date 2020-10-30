@@ -112,6 +112,7 @@ CRITICAL - 2020-10-30 04:57:23 --> [] operator not supported for strings
 #2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #3 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
 #4 {main}
+<<<<<<< HEAD
 CRITICAL - 2020-10-30 05:16:45 --> Unknown database 'new_variety2'
 #0 C:\xampp\htdocs\anime\web2\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
 #1 C:\xampp\htdocs\anime\web2\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
@@ -154,3 +155,13 @@ Stack trace:
   thrown
 #0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
 #1 {main}
+=======
+CRITICAL - 2020-10-30 05:59:18 --> syntax error, unexpected ';'
+#0 C:\xampp\htdocs\animeweb2\system\Common.php(1071): CodeIgniter\View\View->render('anime.php', Array, true)
+#1 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(108): view('anime.php', Array)
+#2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->anime('50', 'Heavy-Object-%E...', '0', 'undefined')
+#3 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+>>>>>>> 9dc9af365c88485c507c3b5e436c00424483b348

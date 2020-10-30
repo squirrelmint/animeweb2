@@ -72,10 +72,36 @@
   <script>
 
     function goView(id, name , ep, nameep) {
+      if(!nameep){
+        nameep == ' '
+      }
+      countView(id);
+
       window.location.href = "/anime/" + id + '/' + name + '/' + ep + '/' + nameep ;
 
     }
   
+    function countView(id) {
+        // alert(id);
+        var base_url = '<?= base_url() ?>';
+        $.ajax({
+
+          url: base_url + "/countview/" + id,
+          method: "GET",
+
+          async: true,
+
+          success: function(response) {
+
+            console.log(response); // server response
+
+          }
+
+
+        });
+
+      }
+
     function goCate(id, name) {
       window.location.href = "/category/" + id + '/' + name ;
     }
