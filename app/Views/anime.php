@@ -20,20 +20,14 @@
               <i class="fas fa-star"></i> <?= $data_anime['movie_ratescore'] ?>
             </div>
             <div class="anime-date"><span class="anime-text-red">อัพเดท :</span>
-              <span class="anime-text-red"><span> <?= $DateEng['m'] . ' ' . $DateEng['d'] . ', ' . $DateEng['Y'] ?></span></span>
-
+               <?= $DateEng['m'] . ' ' . $DateEng['d'] . ', ' . $DateEng['Y'] ?>
             </div>
             <div class="anime-category">
               <span class="anime-text-red">แนวของเรื่อง :</span>
               <?php foreach ($data_anime['cate_data'] as  $val) { ?>
                 <a href="<?php echo base_url() . '/category/' . $val['category_id'] . '/' . $val['category_name'] ?>" target="_blank">
                   <span class="cate-name">
-
-                  
                     <?= $val['category_name'] ?>
-                    <?php if (end($data_anime['cate_data']) != $val) {
-                      echo ' /   ';
-                    } ?>
                   </span>
                 </a>
               <?php } ?>
