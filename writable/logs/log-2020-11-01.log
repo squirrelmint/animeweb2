@@ -1,0 +1,8 @@
+CRITICAL - 2020-11-01 23:55:50 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\animeweb2\system\Common.php(1071): CodeIgniter\View\View->render('anime.php', Array, true)
+#1 C:\xampp\htdocs\animeweb2\app\Controllers\Home.php(108): view('anime.php', Array)
+#2 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(910): App\Controllers\Home->anime('9', 'Oniichan-dakedo...', '11', 'EP-12')
+#3 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\animeweb2\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\animeweb2\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
