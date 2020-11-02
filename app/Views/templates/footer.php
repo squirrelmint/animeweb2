@@ -2,21 +2,18 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <?php
-              foreach ($list_category as $val) {
-                if ( !empty($cate_id) && $cate_id == $val['category_id']) {
-                  $active = 'active';
-                }else{
-                  $active = '';
+      foreach ($list_category as $val) {
+        if ( !empty($cate_id) && $cate_id == $val['category_id']) {
+          $active = 'active';
+        }else{
+          $active = '';
 
-                }
-
-              ?>
-
-
-                <a class="dropdown-item <?= $active ?>" onclick="goCate('<?= ($val['category_id']) ?>','<?= $val['category_name'] ?>')"><?= $val['category_name'] ?></a>
-
-              <?php
-              } ?>
+        }
+    ?>
+    <a class="dropdown-item <?= $active ?>" onclick="goCate('<?= ($val['category_id']) ?>','<?= $val['category_name'] ?>')"><?= $val['category_name'] ?></a>
+    <?php
+      } 
+    ?>
   </div>
 
   <div class="menu-mobile">
@@ -73,7 +70,7 @@
 
     function goView(id, name , ep, nameep) {
       if(!nameep){
-        nameep == ' '
+        nameep = ' ';
       }
       countView(id);
 
