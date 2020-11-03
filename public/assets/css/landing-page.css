@@ -612,6 +612,7 @@ ul.list-anime > li .anime-box {
 
 ul.list-anime > li .anime-box a img {
   width: 100%;
+  height: 100%;
   position: relative;
   -webkit-transition: -webkit-transform 200ms ease;
   transition: -webkit-transform 200ms ease;
@@ -997,6 +998,17 @@ ul.list-anime > li div.title-in .anime-score span.line-small {
   font-style: italic;
 }
 
+#anime-detail-video #anime-detail .anime-card-detail .anime-category a:after {
+  content: '/';
+  position: relative;
+  padding-right: 10px;
+}
+
+#anime-detail-video #anime-detail .anime-card-detail .anime-category a:last-child:after {
+  content: '';
+  padding-right: 0;
+}
+
 #anime-detail-video #anime-detail .anime-card-detail .anime-date {
   display: flex;
   flex-direction: row;
@@ -1134,7 +1146,7 @@ img.logo {
     margin-top: 1rem;
   }
 
-  #anime-detail-video #anime-detail .anime-card-detail .anime-category span.cate-name {
+  #anime-detail-video #anime-detail .anime-card-detail .anime-category a span.cate-name {
     font-size: 12px;
   }
 

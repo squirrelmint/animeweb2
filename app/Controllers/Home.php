@@ -52,9 +52,8 @@ class Home extends BaseController
 			'chk_act' => $chk_act,
 			'ads' => $ads,
 			'path_ads' => $this->path_ads,
-
-
 		];
+		
 		$body_data = [
 			'url_loadmore' => base_url() . '/animedata',
 			'path_thumbnail' => $this->path_thumbnail,
