@@ -74,6 +74,9 @@
               <!-- If we need navigation buttons -->
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
+
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -96,19 +99,43 @@
     window.onload = function() {
 
       var swiper = new Swiper('#NextEP', {
+        speed: 800,
         slidesPerView: 4,
-        spaceBetween: 30,
-        centeredSlides: false,
+        slidesPerGroup: 4,
+        loopFillGroupWithBlank: true,
+        spaceBetween: 10,
+        mousewheel: true,
+        freeMode: true,
         initialSlide: '<?= $ep_index ?>',
+
+        pagination: {
+          el: '.swiper-pagination',
+          dynamicBullets: true,
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        },
+
+        // breakpoints: {
+        //   640: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20,
+        //   },
+        //   768: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 40,
+        //   },
+        //   1024: {
+        //     slidesPerView: 5,
+        //     spaceBetween: 50,
+        //   },
+        // },
+
         // Navigation arrows
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
-        },
-
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
         },
       });
 

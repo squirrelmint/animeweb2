@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="<?= $document_root ?>assets/css/landing-page.css?v=1" rel="stylesheet">
+  <link href="<?= $document_root ?>assets/css/landing-page.css?v=12" rel="stylesheet">
 
   <!-- Bootstrap core JavaScript -->
   <script src="<?= $document_root ?>assets/vendor/jquery/jquery.min.js"></script>
@@ -42,7 +42,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light anime-navbar static-top">
     <div class="container">
       <a class="navbar-brand" href="<?php echo str_replace('/public','',base_url()) ?>">
-        <img class="logo" src="http://localhost:83/public/logo/Logo-Anime-8k-1.png">
+        <img class="logo" src="<?=$document_root?>/assets/img/Logo-Anime-8k-1.png">
       </a>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
